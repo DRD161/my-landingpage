@@ -1,8 +1,44 @@
 /* Variables */
 :root {
-    --bg-dark: #212121;
+  /* Colors */
+  --bg-dark: #212121;
+  --bg-blue: #0045f6;
+  --bg-gradient-blue: linear-gradient(90deg, #0045f6 0%, #212121 100%);
+  --color-white: #fefefe;
+  --color-grey: #8c8c8c;
+
+  /* Typography */
+  --pt-serif: 'PT Serif', serif;
+  --poppins: 'Poppins';
 }
 
 body {
-    background-color: var(--bg-dark);
+  background-color: var(--bg-dark);
+  overflow: hidden;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, minmax(80px, 1fr));
+  height: 100vh;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    padding: 0 50px;
+  }
 }

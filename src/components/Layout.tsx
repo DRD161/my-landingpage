@@ -1,15 +1,12 @@
-import React from "react";
-import * as layoutStyles from "./layout.module.css"
-import {ReactElement} from "react";
+import React, { ReactElement } from 'react';
+import * as layoutStyles from './layout.module.css';
 
 type LayoutProps = {
-    children?: React.ReactElement
-}
+  children?: React.ReactElement;
+};
 
-const Layout = ({children}: LayoutProps): ReactElement | null => {
-    return (
-        <div className={layoutStyles}>{children}</div>
-    )
-}
+const Layout = ({ children }: LayoutProps): ReactElement | null => {
+  return <main className={layoutStyles.layout}>{children}</main>;
+};
 
-export default Layout
+export default Layout;

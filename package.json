@@ -17,6 +17,7 @@
     "eslint:fix": "eslint --fix 'src/**/*.tsx'"
   },
   "dependencies": {
+    "classnames": "^2.3.2",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
