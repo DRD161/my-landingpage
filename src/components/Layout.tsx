@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import * as layoutStyles from './layout.module.css';
+import * as layoutStyles from './modules/layout.module.css';
 
 type LayoutProps = {
   children?: React.ReactElement;

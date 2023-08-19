@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import * as styles from './header.module.css';
+import * as styles from './modules/header.module.css';
 
 type HeaderProps = {
   firstName: string;
