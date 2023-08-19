@@ -24,7 +24,7 @@ yarn-error.log*
 
 # gatsby
 .cache
-public
+/public
 
 # webstorm
 .idea
