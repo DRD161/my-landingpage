@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import SubHeader from '../components/SubHeader';
+import Social from '../components/Social';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -10,6 +11,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <>
         <Header firstName={'Dylan'} lastName={'Davenport'} />
         <SubHeader text="Front-End Developer and UX Enthusiast" />
+        <Social />
       </>
     </Layout>
   );

@@ -16,10 +16,18 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: 'icons',
+        path: `${__dirname}/static/icons`,
       },
-      __key: 'images',
+      __key: 'icons',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'projectImages',
+        path: `${__dirname}/src/images/projectImages`,
+      },
+      __key: 'projectImages',
     },
   ],
 };
