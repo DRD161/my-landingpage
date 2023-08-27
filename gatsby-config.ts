@@ -1,4 +1,8 @@
 import type { GatsbyConfig } from 'gatsby';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -14,20 +18,13 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-cloudinary`,
       options: {
-        name: 'icons',
-        path: `${__dirname}/static/icons`,
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        context: true,
       },
-      __key: 'icons',
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'projectImages',
-        path: `${__dirname}/src/images/projectImages`,
-      },
-      __key: 'projectImages',
     },
   ],
 };

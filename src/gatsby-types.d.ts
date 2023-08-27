@@ -48,6 +48,492 @@ type BooleanQueryOperatorInput = {
   readonly nin: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Boolean']>>>;
 };
 
+type CloudinaryMedia = Node & {
+  readonly asset_id: Maybe<Scalars['String']>;
+  readonly bytes: Maybe<Scalars['Int']>;
+  readonly children: ReadonlyArray<Node>;
+  readonly cloudName: Maybe<Scalars['String']>;
+  readonly cloudinaryData: Maybe<CloudinaryMediaCloudinaryData>;
+  readonly context: Maybe<CloudinaryMediaContext>;
+  readonly created_at: Maybe<Scalars['Date']>;
+  readonly folder: Maybe<Scalars['String']>;
+  readonly format: Maybe<Scalars['String']>;
+  readonly height: Maybe<Scalars['Int']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly last_updated: Maybe<CloudinaryMediaLast_updated>;
+  readonly metadata: Maybe<CloudinaryMediaMetadata>;
+  readonly originalFormat: Maybe<Scalars['String']>;
+  readonly originalHeight: Maybe<Scalars['Int']>;
+  readonly originalWidth: Maybe<Scalars['Int']>;
+  readonly parent: Maybe<Node>;
+  readonly publicId: Maybe<Scalars['String']>;
+  readonly public_id: Maybe<Scalars['String']>;
+  readonly resource_type: Maybe<Scalars['String']>;
+  readonly secure_url: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+  readonly url: Maybe<Scalars['String']>;
+  readonly version: Maybe<Scalars['Int']>;
+  readonly width: Maybe<Scalars['Int']>;
+};
+
+
+type CloudinaryMedia_created_atArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type CloudinaryMediaCloudinaryData = {
+  readonly asset_id: Maybe<Scalars['String']>;
+  readonly bytes: Maybe<Scalars['Int']>;
+  readonly context: Maybe<CloudinaryMediaCloudinaryDataContext>;
+  readonly created_at: Maybe<Scalars['Date']>;
+  readonly folder: Maybe<Scalars['String']>;
+  readonly format: Maybe<Scalars['String']>;
+  readonly height: Maybe<Scalars['Int']>;
+  readonly last_updated: Maybe<CloudinaryMediaCloudinaryDataLast_updated>;
+  readonly metadata: Maybe<CloudinaryMediaCloudinaryDataMetadata>;
+  readonly public_id: Maybe<Scalars['String']>;
+  readonly resource_type: Maybe<Scalars['String']>;
+  readonly secure_url: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+  readonly url: Maybe<Scalars['String']>;
+  readonly version: Maybe<Scalars['Int']>;
+  readonly width: Maybe<Scalars['Int']>;
+};
+
+
+type CloudinaryMediaCloudinaryData_created_atArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type CloudinaryMediaCloudinaryDataContext = {
+  readonly custom: Maybe<CloudinaryMediaCloudinaryDataContextCustom>;
+};
+
+type CloudinaryMediaCloudinaryDataContextCustom = {
+  readonly alt: Maybe<Scalars['String']>;
+  readonly caption: Maybe<Scalars['String']>;
+};
+
+type CloudinaryMediaCloudinaryDataContextCustomFieldSelector = {
+  readonly alt: InputMaybe<FieldSelectorEnum>;
+  readonly caption: InputMaybe<FieldSelectorEnum>;
+};
+
+type CloudinaryMediaCloudinaryDataContextCustomFilterInput = {
+  readonly alt: InputMaybe<StringQueryOperatorInput>;
+  readonly caption: InputMaybe<StringQueryOperatorInput>;
+};
+
+type CloudinaryMediaCloudinaryDataContextCustomSortInput = {
+  readonly alt: InputMaybe<SortOrderEnum>;
+  readonly caption: InputMaybe<SortOrderEnum>;
+};
+
+type CloudinaryMediaCloudinaryDataContextFieldSelector = {
+  readonly custom: InputMaybe<CloudinaryMediaCloudinaryDataContextCustomFieldSelector>;
+};
+
+type CloudinaryMediaCloudinaryDataContextFilterInput = {
+  readonly custom: InputMaybe<CloudinaryMediaCloudinaryDataContextCustomFilterInput>;
+};
+
+type CloudinaryMediaCloudinaryDataContextSortInput = {
+  readonly custom: InputMaybe<CloudinaryMediaCloudinaryDataContextCustomSortInput>;
+};
+
+type CloudinaryMediaCloudinaryDataFieldSelector = {
+  readonly asset_id: InputMaybe<FieldSelectorEnum>;
+  readonly bytes: InputMaybe<FieldSelectorEnum>;
+  readonly context: InputMaybe<CloudinaryMediaCloudinaryDataContextFieldSelector>;
+  readonly created_at: InputMaybe<FieldSelectorEnum>;
+  readonly folder: InputMaybe<FieldSelectorEnum>;
+  readonly format: InputMaybe<FieldSelectorEnum>;
+  readonly height: InputMaybe<FieldSelectorEnum>;
+  readonly last_updated: InputMaybe<CloudinaryMediaCloudinaryDataLast_updatedFieldSelector>;
+  readonly metadata: InputMaybe<CloudinaryMediaCloudinaryDataMetadataFieldSelector>;
+  readonly public_id: InputMaybe<FieldSelectorEnum>;
+  readonly resource_type: InputMaybe<FieldSelectorEnum>;
+  readonly secure_url: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+  readonly url: InputMaybe<FieldSelectorEnum>;
+  readonly version: InputMaybe<FieldSelectorEnum>;
+  readonly width: InputMaybe<FieldSelectorEnum>;
+};
+
+type CloudinaryMediaCloudinaryDataFilterInput = {
+  readonly asset_id: InputMaybe<StringQueryOperatorInput>;
+  readonly bytes: InputMaybe<IntQueryOperatorInput>;
+  readonly context: InputMaybe<CloudinaryMediaCloudinaryDataContextFilterInput>;
+  readonly created_at: InputMaybe<DateQueryOperatorInput>;
+  readonly folder: InputMaybe<StringQueryOperatorInput>;
+  readonly format: InputMaybe<StringQueryOperatorInput>;
+  readonly height: InputMaybe<IntQueryOperatorInput>;
+  readonly last_updated: InputMaybe<CloudinaryMediaCloudinaryDataLast_updatedFilterInput>;
+  readonly metadata: InputMaybe<CloudinaryMediaCloudinaryDataMetadataFilterInput>;
+  readonly public_id: InputMaybe<StringQueryOperatorInput>;
+  readonly resource_type: InputMaybe<StringQueryOperatorInput>;
+  readonly secure_url: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+  readonly url: InputMaybe<StringQueryOperatorInput>;
+  readonly version: InputMaybe<IntQueryOperatorInput>;
+  readonly width: InputMaybe<IntQueryOperatorInput>;
+};
+
+type CloudinaryMediaCloudinaryDataLast_updated = {
+  readonly metadata_updated_at: Maybe<Scalars['Date']>;
+  readonly updated_at: Maybe<Scalars['Date']>;
+};
+
+
+type CloudinaryMediaCloudinaryDataLast_updated_metadata_updated_atArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type CloudinaryMediaCloudinaryDataLast_updated_updated_atArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type CloudinaryMediaCloudinaryDataLast_updatedFieldSelector = {
+  readonly metadata_updated_at: InputMaybe<FieldSelectorEnum>;
+  readonly updated_at: InputMaybe<FieldSelectorEnum>;
+};
+
+type CloudinaryMediaCloudinaryDataLast_updatedFilterInput = {
+  readonly metadata_updated_at: InputMaybe<DateQueryOperatorInput>;
+  readonly updated_at: InputMaybe<DateQueryOperatorInput>;
+};
+
+type CloudinaryMediaCloudinaryDataLast_updatedSortInput = {
+  readonly metadata_updated_at: InputMaybe<SortOrderEnum>;
+  readonly updated_at: InputMaybe<SortOrderEnum>;
+};
+
+type CloudinaryMediaCloudinaryDataMetadata = {
+  readonly alt: Maybe<Scalars['String']>;
+  readonly ids: Maybe<Scalars['String']>;
+  readonly link: Maybe<Scalars['String']>;
+};
+
+type CloudinaryMediaCloudinaryDataMetadataFieldSelector = {
+  readonly alt: InputMaybe<FieldSelectorEnum>;
+  readonly ids: InputMaybe<FieldSelectorEnum>;
+  readonly link: InputMaybe<FieldSelectorEnum>;
+};
+
+type CloudinaryMediaCloudinaryDataMetadataFilterInput = {
+  readonly alt: InputMaybe<StringQueryOperatorInput>;
+  readonly ids: InputMaybe<StringQueryOperatorInput>;
+  readonly link: InputMaybe<StringQueryOperatorInput>;
+};
+
+type CloudinaryMediaCloudinaryDataMetadataSortInput = {
+  readonly alt: InputMaybe<SortOrderEnum>;
+  readonly ids: InputMaybe<SortOrderEnum>;
+  readonly link: InputMaybe<SortOrderEnum>;
+};
+
+type CloudinaryMediaCloudinaryDataSortInput = {
+  readonly asset_id: InputMaybe<SortOrderEnum>;
+  readonly bytes: InputMaybe<SortOrderEnum>;
+  readonly context: InputMaybe<CloudinaryMediaCloudinaryDataContextSortInput>;
+  readonly created_at: InputMaybe<SortOrderEnum>;
+  readonly folder: InputMaybe<SortOrderEnum>;
+  readonly format: InputMaybe<SortOrderEnum>;
+  readonly height: InputMaybe<SortOrderEnum>;
+  readonly last_updated: InputMaybe<CloudinaryMediaCloudinaryDataLast_updatedSortInput>;
+  readonly metadata: InputMaybe<CloudinaryMediaCloudinaryDataMetadataSortInput>;
+  readonly public_id: InputMaybe<SortOrderEnum>;
+  readonly resource_type: InputMaybe<SortOrderEnum>;
+  readonly secure_url: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+  readonly url: InputMaybe<SortOrderEnum>;
+  readonly version: InputMaybe<SortOrderEnum>;
+  readonly width: InputMaybe<SortOrderEnum>;
+};
+
+type CloudinaryMediaConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<CloudinaryMediaEdge>;
+  readonly group: ReadonlyArray<CloudinaryMediaGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<CloudinaryMedia>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type CloudinaryMediaConnection_distinctArgs = {
+  field: CloudinaryMediaFieldSelector;
+};
+
+
+type CloudinaryMediaConnection_groupArgs = {
+  field: CloudinaryMediaFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type CloudinaryMediaConnection_maxArgs = {
+  field: CloudinaryMediaFieldSelector;
+};
+
+
+type CloudinaryMediaConnection_minArgs = {
+  field: CloudinaryMediaFieldSelector;
+};
+
+
+type CloudinaryMediaConnection_sumArgs = {
+  field: CloudinaryMediaFieldSelector;
+};
+
+type CloudinaryMediaContext = {
+  readonly custom: Maybe<CloudinaryMediaContextCustom>;
+};
+
+type CloudinaryMediaContextCustom = {
+  readonly alt: Maybe<Scalars['String']>;
+  readonly caption: Maybe<Scalars['String']>;
+};
+
+type CloudinaryMediaContextCustomFieldSelector = {
+  readonly alt: InputMaybe<FieldSelectorEnum>;
+  readonly caption: InputMaybe<FieldSelectorEnum>;
+};
+
+type CloudinaryMediaContextCustomFilterInput = {
+  readonly alt: InputMaybe<StringQueryOperatorInput>;
+  readonly caption: InputMaybe<StringQueryOperatorInput>;
+};
+
+type CloudinaryMediaContextCustomSortInput = {
+  readonly alt: InputMaybe<SortOrderEnum>;
+  readonly caption: InputMaybe<SortOrderEnum>;
+};
+
+type CloudinaryMediaContextFieldSelector = {
+  readonly custom: InputMaybe<CloudinaryMediaContextCustomFieldSelector>;
+};
+
+type CloudinaryMediaContextFilterInput = {
+  readonly custom: InputMaybe<CloudinaryMediaContextCustomFilterInput>;
+};
+
+type CloudinaryMediaContextSortInput = {
+  readonly custom: InputMaybe<CloudinaryMediaContextCustomSortInput>;
+};
+
+type CloudinaryMediaEdge = {
+  readonly next: Maybe<CloudinaryMedia>;
+  readonly node: CloudinaryMedia;
+  readonly previous: Maybe<CloudinaryMedia>;
+};
+
+type CloudinaryMediaFieldSelector = {
+  readonly asset_id: InputMaybe<FieldSelectorEnum>;
+  readonly bytes: InputMaybe<FieldSelectorEnum>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly cloudName: InputMaybe<FieldSelectorEnum>;
+  readonly cloudinaryData: InputMaybe<CloudinaryMediaCloudinaryDataFieldSelector>;
+  readonly context: InputMaybe<CloudinaryMediaContextFieldSelector>;
+  readonly created_at: InputMaybe<FieldSelectorEnum>;
+  readonly folder: InputMaybe<FieldSelectorEnum>;
+  readonly format: InputMaybe<FieldSelectorEnum>;
+  readonly height: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly last_updated: InputMaybe<CloudinaryMediaLast_updatedFieldSelector>;
+  readonly metadata: InputMaybe<CloudinaryMediaMetadataFieldSelector>;
+  readonly originalFormat: InputMaybe<FieldSelectorEnum>;
+  readonly originalHeight: InputMaybe<FieldSelectorEnum>;
+  readonly originalWidth: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly publicId: InputMaybe<FieldSelectorEnum>;
+  readonly public_id: InputMaybe<FieldSelectorEnum>;
+  readonly resource_type: InputMaybe<FieldSelectorEnum>;
+  readonly secure_url: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+  readonly url: InputMaybe<FieldSelectorEnum>;
+  readonly version: InputMaybe<FieldSelectorEnum>;
+  readonly width: InputMaybe<FieldSelectorEnum>;
+};
+
+type CloudinaryMediaFilterInput = {
+  readonly asset_id: InputMaybe<StringQueryOperatorInput>;
+  readonly bytes: InputMaybe<IntQueryOperatorInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly cloudName: InputMaybe<StringQueryOperatorInput>;
+  readonly cloudinaryData: InputMaybe<CloudinaryMediaCloudinaryDataFilterInput>;
+  readonly context: InputMaybe<CloudinaryMediaContextFilterInput>;
+  readonly created_at: InputMaybe<DateQueryOperatorInput>;
+  readonly folder: InputMaybe<StringQueryOperatorInput>;
+  readonly format: InputMaybe<StringQueryOperatorInput>;
+  readonly height: InputMaybe<IntQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly last_updated: InputMaybe<CloudinaryMediaLast_updatedFilterInput>;
+  readonly metadata: InputMaybe<CloudinaryMediaMetadataFilterInput>;
+  readonly originalFormat: InputMaybe<StringQueryOperatorInput>;
+  readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
+  readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly publicId: InputMaybe<StringQueryOperatorInput>;
+  readonly public_id: InputMaybe<StringQueryOperatorInput>;
+  readonly resource_type: InputMaybe<StringQueryOperatorInput>;
+  readonly secure_url: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+  readonly url: InputMaybe<StringQueryOperatorInput>;
+  readonly version: InputMaybe<IntQueryOperatorInput>;
+  readonly width: InputMaybe<IntQueryOperatorInput>;
+};
+
+type CloudinaryMediaGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<CloudinaryMediaEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<CloudinaryMediaGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<CloudinaryMedia>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type CloudinaryMediaGroupConnection_distinctArgs = {
+  field: CloudinaryMediaFieldSelector;
+};
+
+
+type CloudinaryMediaGroupConnection_groupArgs = {
+  field: CloudinaryMediaFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type CloudinaryMediaGroupConnection_maxArgs = {
+  field: CloudinaryMediaFieldSelector;
+};
+
+
+type CloudinaryMediaGroupConnection_minArgs = {
+  field: CloudinaryMediaFieldSelector;
+};
+
+
+type CloudinaryMediaGroupConnection_sumArgs = {
+  field: CloudinaryMediaFieldSelector;
+};
+
+type CloudinaryMediaLast_updated = {
+  readonly metadata_updated_at: Maybe<Scalars['Date']>;
+  readonly updated_at: Maybe<Scalars['Date']>;
+};
+
+
+type CloudinaryMediaLast_updated_metadata_updated_atArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type CloudinaryMediaLast_updated_updated_atArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type CloudinaryMediaLast_updatedFieldSelector = {
+  readonly metadata_updated_at: InputMaybe<FieldSelectorEnum>;
+  readonly updated_at: InputMaybe<FieldSelectorEnum>;
+};
+
+type CloudinaryMediaLast_updatedFilterInput = {
+  readonly metadata_updated_at: InputMaybe<DateQueryOperatorInput>;
+  readonly updated_at: InputMaybe<DateQueryOperatorInput>;
+};
+
+type CloudinaryMediaLast_updatedSortInput = {
+  readonly metadata_updated_at: InputMaybe<SortOrderEnum>;
+  readonly updated_at: InputMaybe<SortOrderEnum>;
+};
+
+type CloudinaryMediaMetadata = {
+  readonly alt: Maybe<Scalars['String']>;
+  readonly ids: Maybe<Scalars['String']>;
+  readonly link: Maybe<Scalars['String']>;
+};
+
+type CloudinaryMediaMetadataFieldSelector = {
+  readonly alt: InputMaybe<FieldSelectorEnum>;
+  readonly ids: InputMaybe<FieldSelectorEnum>;
+  readonly link: InputMaybe<FieldSelectorEnum>;
+};
+
+type CloudinaryMediaMetadataFilterInput = {
+  readonly alt: InputMaybe<StringQueryOperatorInput>;
+  readonly ids: InputMaybe<StringQueryOperatorInput>;
+  readonly link: InputMaybe<StringQueryOperatorInput>;
+};
+
+type CloudinaryMediaMetadataSortInput = {
+  readonly alt: InputMaybe<SortOrderEnum>;
+  readonly ids: InputMaybe<SortOrderEnum>;
+  readonly link: InputMaybe<SortOrderEnum>;
+};
+
+type CloudinaryMediaSortInput = {
+  readonly asset_id: InputMaybe<SortOrderEnum>;
+  readonly bytes: InputMaybe<SortOrderEnum>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly cloudName: InputMaybe<SortOrderEnum>;
+  readonly cloudinaryData: InputMaybe<CloudinaryMediaCloudinaryDataSortInput>;
+  readonly context: InputMaybe<CloudinaryMediaContextSortInput>;
+  readonly created_at: InputMaybe<SortOrderEnum>;
+  readonly folder: InputMaybe<SortOrderEnum>;
+  readonly format: InputMaybe<SortOrderEnum>;
+  readonly height: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly last_updated: InputMaybe<CloudinaryMediaLast_updatedSortInput>;
+  readonly metadata: InputMaybe<CloudinaryMediaMetadataSortInput>;
+  readonly originalFormat: InputMaybe<SortOrderEnum>;
+  readonly originalHeight: InputMaybe<SortOrderEnum>;
+  readonly originalWidth: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly publicId: InputMaybe<SortOrderEnum>;
+  readonly public_id: InputMaybe<SortOrderEnum>;
+  readonly resource_type: InputMaybe<SortOrderEnum>;
+  readonly secure_url: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+  readonly url: InputMaybe<SortOrderEnum>;
+  readonly version: InputMaybe<SortOrderEnum>;
+  readonly width: InputMaybe<SortOrderEnum>;
+};
+
 type DateQueryOperatorInput = {
   readonly eq: InputMaybe<Scalars['Date']>;
   readonly gt: InputMaybe<Scalars['Date']>;
@@ -375,8 +861,6 @@ type File = Node & {
   readonly birthtime: Maybe<Scalars['Date']>;
   /** @deprecated Use `birthTime` instead */
   readonly birthtimeMs: Maybe<Scalars['Float']>;
-  readonly blksize: Maybe<Scalars['Int']>;
-  readonly blocks: Maybe<Scalars['Int']>;
   readonly changeTime: Scalars['Date'];
   /** Returns the first child node of type ImageSharp or null if there are no children of given type on this node */
   readonly childImageSharp: Maybe<ImageSharp>;
@@ -401,8 +885,6 @@ type File = Node & {
   readonly nlink: Scalars['Int'];
   readonly parent: Maybe<Node>;
   readonly prettySize: Scalars['String'];
-  /** Copy file to static directory and return public url to it */
-  readonly publicURL: Maybe<Scalars['String']>;
   readonly rdev: Scalars['Int'];
   readonly relativeDirectory: Scalars['String'];
   readonly relativePath: Scalars['String'];
@@ -522,8 +1004,6 @@ type FileFieldSelector = {
   readonly birthTime: InputMaybe<FieldSelectorEnum>;
   readonly birthtime: InputMaybe<FieldSelectorEnum>;
   readonly birthtimeMs: InputMaybe<FieldSelectorEnum>;
-  readonly blksize: InputMaybe<FieldSelectorEnum>;
-  readonly blocks: InputMaybe<FieldSelectorEnum>;
   readonly changeTime: InputMaybe<FieldSelectorEnum>;
   readonly childImageSharp: InputMaybe<ImageSharpFieldSelector>;
   readonly children: InputMaybe<NodeFieldSelector>;
@@ -546,7 +1026,6 @@ type FileFieldSelector = {
   readonly nlink: InputMaybe<FieldSelectorEnum>;
   readonly parent: InputMaybe<NodeFieldSelector>;
   readonly prettySize: InputMaybe<FieldSelectorEnum>;
-  readonly publicURL: InputMaybe<FieldSelectorEnum>;
   readonly rdev: InputMaybe<FieldSelectorEnum>;
   readonly relativeDirectory: InputMaybe<FieldSelectorEnum>;
   readonly relativePath: InputMaybe<FieldSelectorEnum>;
@@ -565,8 +1044,6 @@ type FileFilterInput = {
   readonly birthTime: InputMaybe<DateQueryOperatorInput>;
   readonly birthtime: InputMaybe<DateQueryOperatorInput>;
   readonly birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly blksize: InputMaybe<IntQueryOperatorInput>;
-  readonly blocks: InputMaybe<IntQueryOperatorInput>;
   readonly changeTime: InputMaybe<DateQueryOperatorInput>;
   readonly childImageSharp: InputMaybe<ImageSharpFilterInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
@@ -589,7 +1066,6 @@ type FileFilterInput = {
   readonly nlink: InputMaybe<IntQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly prettySize: InputMaybe<StringQueryOperatorInput>;
-  readonly publicURL: InputMaybe<StringQueryOperatorInput>;
   readonly rdev: InputMaybe<IntQueryOperatorInput>;
   readonly relativeDirectory: InputMaybe<StringQueryOperatorInput>;
   readonly relativePath: InputMaybe<StringQueryOperatorInput>;
@@ -649,8 +1125,6 @@ type FileSortInput = {
   readonly birthTime: InputMaybe<SortOrderEnum>;
   readonly birthtime: InputMaybe<SortOrderEnum>;
   readonly birthtimeMs: InputMaybe<SortOrderEnum>;
-  readonly blksize: InputMaybe<SortOrderEnum>;
-  readonly blocks: InputMaybe<SortOrderEnum>;
   readonly changeTime: InputMaybe<SortOrderEnum>;
   readonly childImageSharp: InputMaybe<ImageSharpSortInput>;
   readonly children: InputMaybe<NodeSortInput>;
@@ -673,7 +1147,6 @@ type FileSortInput = {
   readonly nlink: InputMaybe<SortOrderEnum>;
   readonly parent: InputMaybe<NodeSortInput>;
   readonly prettySize: InputMaybe<SortOrderEnum>;
-  readonly publicURL: InputMaybe<SortOrderEnum>;
   readonly rdev: InputMaybe<SortOrderEnum>;
   readonly relativeDirectory: InputMaybe<SortOrderEnum>;
   readonly relativePath: InputMaybe<SortOrderEnum>;
@@ -1304,6 +1777,7 @@ type PotraceTurnPolicy =
   | 'white';
 
 type Query = {
+  readonly allCloudinaryMedia: CloudinaryMediaConnection;
   readonly allDirectory: DirectoryConnection;
   readonly allFile: FileConnection;
   readonly allImageSharp: ImageSharpConnection;
@@ -1312,6 +1786,7 @@ type Query = {
   readonly allSiteFunction: SiteFunctionConnection;
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
+  readonly cloudinaryMedia: Maybe<CloudinaryMedia>;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
@@ -1320,6 +1795,14 @@ type Query = {
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
+};
+
+
+type Query_allCloudinaryMediaArgs = {
+  filter: InputMaybe<CloudinaryMediaFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<CloudinaryMediaSortInput>>>;
 };
 
 
@@ -1387,6 +1870,36 @@ type Query_allSitePluginArgs = {
 };
 
 
+type Query_cloudinaryMediaArgs = {
+  asset_id: InputMaybe<StringQueryOperatorInput>;
+  bytes: InputMaybe<IntQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  cloudName: InputMaybe<StringQueryOperatorInput>;
+  cloudinaryData: InputMaybe<CloudinaryMediaCloudinaryDataFilterInput>;
+  context: InputMaybe<CloudinaryMediaContextFilterInput>;
+  created_at: InputMaybe<DateQueryOperatorInput>;
+  folder: InputMaybe<StringQueryOperatorInput>;
+  format: InputMaybe<StringQueryOperatorInput>;
+  height: InputMaybe<IntQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  last_updated: InputMaybe<CloudinaryMediaLast_updatedFilterInput>;
+  metadata: InputMaybe<CloudinaryMediaMetadataFilterInput>;
+  originalFormat: InputMaybe<StringQueryOperatorInput>;
+  originalHeight: InputMaybe<IntQueryOperatorInput>;
+  originalWidth: InputMaybe<IntQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  publicId: InputMaybe<StringQueryOperatorInput>;
+  public_id: InputMaybe<StringQueryOperatorInput>;
+  resource_type: InputMaybe<StringQueryOperatorInput>;
+  secure_url: InputMaybe<StringQueryOperatorInput>;
+  type: InputMaybe<StringQueryOperatorInput>;
+  url: InputMaybe<StringQueryOperatorInput>;
+  version: InputMaybe<IntQueryOperatorInput>;
+  width: InputMaybe<IntQueryOperatorInput>;
+};
+
+
 type Query_directoryArgs = {
   absolutePath: InputMaybe<StringQueryOperatorInput>;
   accessTime: InputMaybe<DateQueryOperatorInput>;
@@ -1435,8 +1948,6 @@ type Query_fileArgs = {
   birthTime: InputMaybe<DateQueryOperatorInput>;
   birthtime: InputMaybe<DateQueryOperatorInput>;
   birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  blksize: InputMaybe<IntQueryOperatorInput>;
-  blocks: InputMaybe<IntQueryOperatorInput>;
   changeTime: InputMaybe<DateQueryOperatorInput>;
   childImageSharp: InputMaybe<ImageSharpFilterInput>;
   children: InputMaybe<NodeFilterListInput>;
@@ -1459,7 +1970,6 @@ type Query_fileArgs = {
   nlink: InputMaybe<IntQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
   prettySize: InputMaybe<StringQueryOperatorInput>;
-  publicURL: InputMaybe<StringQueryOperatorInput>;
   rdev: InputMaybe<IntQueryOperatorInput>;
   relativeDirectory: InputMaybe<StringQueryOperatorInput>;
   relativePath: InputMaybe<StringQueryOperatorInput>;
@@ -2347,6 +2857,16 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
+type CloudinaryIconsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type CloudinaryIconsQuery = { readonly allCloudinaryMedia: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly publicId: string | null, readonly cloudinaryData: { readonly secure_url: string | null } | null, readonly metadata: { readonly ids: string | null, readonly link: string | null, readonly alt: string | null } | null }> } };
+
+type CloudinaryImagesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type CloudinaryImagesQuery = { readonly allCloudinaryMedia: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly publicId: string | null, readonly cloudinaryData: { readonly secure_url: string | null } | null, readonly metadata: { readonly ids: string | null, readonly link: string | null } | null }> } };
+
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 
 type GatsbyImageSharpFixed_noBase64Fragment = { readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
@@ -2372,11 +2892,6 @@ type GatsbyImageSharpFluid_withWebp_noBase64Fragment = { readonly aspectRatio: n
 type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: string | null, readonly aspectRatio: number, readonly src: string, readonly srcSet: string, readonly srcWebp: string | null, readonly srcSetWebp: string | null, readonly sizes: string };
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
-
-type GetIconsQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type GetIconsQuery = { readonly allFile: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly name: string, readonly relativePath: string }> } };
 
 
 }
