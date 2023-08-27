@@ -5,7 +5,7 @@ type SubHeaderProps = {
   text: string;
 };
 
-const SubHeader = ({ text }: SubHeaderProps) => {
+const SubHeader = ({ text }: SubHeaderProps): React.JSX.Element => {
   return <h2 className={styles.subHeader}>{text}</h2>;
 };
 
