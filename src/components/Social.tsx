@@ -1,14 +1,32 @@
 import React from 'react';
-import { useGetIcons } from '../hooks/use-get-icons';
-// import cx from 'classnames';
-// import * as styles from './modules/social.module.css';
+import * as styles from './modules/social.module.css';
 
-const Social = (): React.JSX.Element => {
-  const { icons } = useGetIcons();
+type icons = {
+  id: number;
+  publicId: string;
+  cloudinaryData: {
+    secure_url: string;
+  };
+  metadata: {
+    id: string;
+    link: string;
+    alt: string;
+  };
+};
+
+type SocialProps = {
+  icons: icons[];
+};
+
+const Social = ({ icons }: SocialProps): React.JSX.Element => {
   return (
-    <div className="social">
+    <div className={styles.social}>
       {icons.map((icon) => {
-        return <img key={icon.id} src={`icons/${icon.relativePath}`} alt="social share image" />;
+        return (
+          <a key={icon.id} href={icon.metadata.link} target="_blank" className={styles.socialIcon}>
+            <img id={icon.publicId} key={icon.id} src={icon.cloudinaryData.secure_url} alt={icon.metadata.alt} />
+          </a>
+        );
       })}
     </div>
   );

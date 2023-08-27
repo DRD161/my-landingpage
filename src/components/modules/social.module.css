@@ -1,0 +1,21 @@
+.social {
+  grid-column: 1 / 6;
+  grid-row: 6;
+}
+
+.socialIcon:not(:last-of-type) {
+  margin-right: 2em;
+}
+
+@media (min-width: 768px) {
+  .social {
+    grid-row: 6;
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .social {
+    grid-row: 7;
+  }
+}
