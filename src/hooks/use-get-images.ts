@@ -2,8 +2,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 export const useGetIcons = () => {
   const data = useStaticQuery(graphql`
-    query CloudinaryIcons {
-      allCloudinaryMedia(filter: { folder: { eq: "icons" } }, sort: { publicId: ASC }) {
+    query CloudinaryImages {
+      allCloudinaryMedia(filter: { folder: { eq: "projectImages" } }, sort: { publicId: ASC }) {
         nodes {
           id
           publicId
@@ -13,14 +13,13 @@ export const useGetIcons = () => {
           metadata {
             ids
             link
-            alt
           }
         }
       }
     }
   `);
 
-  type icon = {
+  type image = {
     id: number;
     publicId: string;
     cloudinaryData: {
@@ -29,24 +28,22 @@ export const useGetIcons = () => {
     metadata: {
       id: string;
       link: string;
-      alt: string;
     };
   };
 
-  const icons: icon[] = data.allCloudinaryMedia.nodes.map(
-    (node: { id: string; publicId: string; secure_url: string; cloudinaryData: object; metadata: object }) => {
-      const { id, publicId, secure_url, cloudinaryData, metadata } = node;
+  const images: image[] = data.allCloudinaryMedia.nodes.map(
+    (node: { id: string; publicId: string; cloudinaryData: object; metadata: object }) => {
+      const { id, publicId, cloudinaryData, metadata } = node;
       return {
         id,
         publicId,
         cloudinaryData,
-        secure_url,
         metadata,
       };
     }
   );
 
   return {
-    icons,
+    images,
   };
 };
