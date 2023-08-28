@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import SubHeader from '../components/SubHeader';
 import Social from '../components/Social';
 import IntroText from '../components/IntroText';
+import Contact from '../components/Contact';
 
 // hooks
 import { useGetIcons } from '../hooks/use-get-icons';
@@ -23,6 +24,7 @@ const IndexPage: React.FC<PageProps> = () => {
           emphasis on accessibility and user friendliness. I specialize in using semantic markup along with JavaScript to
           make dynamic data driven content."
         />
+        <Contact link={'mailto:dylan@dylandavenport.com'} text={'get in touch'} />
       </>
     </Layout>
   );
