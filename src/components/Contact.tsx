@@ -9,10 +9,12 @@ type ContactProps = {
 
 const Contact = ({ link, text }: ContactProps): React.JSX.Element => {
   return (
-    <a href={link} className={styles.contact}>
-      {text}
-      <img src={arrow} alt="email link arrow icon" className={styles.contactIcon} />
-    </a>
+    <section className={styles.contact}>
+      <a href={link} className={styles.contactLink}>
+        {text}
+        <img src={arrow} alt="email link arrow icon" className={styles.contactIcon} />
+      </a>
+    </section>
   );
 };
 

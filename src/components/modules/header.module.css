@@ -5,9 +5,11 @@
 }
 
 .headerText {
+  position: relative;
+  z-index: 1;
   color: var(--color-white);
   font-family: var(--pt-serif);
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 6px;
   line-height: 3rem;
@@ -18,8 +20,8 @@
   width: max-content;
 }
 
-.headerText.headerFirstName:after,
-.headerText.headerLastName:after {
+.headerText.headerFirstName::after,
+.headerText.headerLastName::after {
   content: '';
   display: block;
   width: 100%;
@@ -28,6 +30,12 @@
   position: relative;
   top: -0.34em;
   z-index: -1;
+}
+
+@media (min-width: 400px) {
+  .headerText {
+    font-size: 3.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -40,8 +48,8 @@
     line-height: 4rem;
   }
 
-  .headerText.headerFirstName:after,
-  .headerText.headerLastName:after {
+  .headerText.headerFirstName::after,
+  .headerText.headerLastName::after {
     top: -0.28em;
   }
 }
@@ -52,12 +60,12 @@
   }
 
   .headerText {
-    font-size: 8rem;
+    font-size: 9rem;
     line-height: 5rem;
   }
 
-  .headerText.headerFirstName:after,
-  .headerText.headerLastName:after {
-    top: -0.27em;
+  .headerText.headerFirstName::after,
+  .headerText.headerLastName::after {
+    top: -0.23em;
   }
 }

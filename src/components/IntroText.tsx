@@ -6,7 +6,11 @@ type IntroTextProps = {
 };
 
 const IntroText = ({ text }: IntroTextProps): React.JSX.Element => {
-  return <p className={styles.intro}>{text}</p>;
+  return (
+    <section className={styles.intro}>
+      <p className={styles.introText}>{text}</p>
+    </section>
+  );
 };
 
 export default IntroText;

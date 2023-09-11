@@ -6,7 +6,11 @@ type SubHeaderProps = {
 };
 
 const SubHeader = ({ text }: SubHeaderProps): React.JSX.Element => {
-  return <h2 className={styles.subHeader}>{text}</h2>;
+  return (
+    <section className={styles.subHeader}>
+      <h2 className={styles.subHeaderText}>{text}</h2>
+    </section>
+  );
 };
 
 export default SubHeader;

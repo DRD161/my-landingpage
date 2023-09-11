@@ -20,7 +20,7 @@ type SocialProps = {
 
 const Social = ({ icons }: SocialProps): React.JSX.Element => {
   return (
-    <div className={styles.social}>
+    <section className={styles.social}>
       {icons.map((icon) => {
         return (
           <a key={icon.id} href={icon.metadata.link} target="_blank" className={styles.socialIcon}>
@@ -28,7 +28,7 @@ const Social = ({ icons }: SocialProps): React.JSX.Element => {
           </a>
         );
       })}
-    </div>
+    </section>
   );
 };
 

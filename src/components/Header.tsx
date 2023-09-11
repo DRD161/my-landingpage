@@ -9,10 +9,12 @@ type HeaderProps = {
 
 const Header = ({ firstName, lastName }: HeaderProps): React.JSX.Element => {
   return (
-    <h1 className={styles.header}>
-      <div className={cx(styles.headerText, styles.headerFirstName)}>{firstName}</div>
-      <div className={cx(styles.headerText, styles.headerLastName)}>{lastName}</div>
-    </h1>
+    <section className={styles.header}>
+      <h1>
+        <div className={cx(styles.headerText, styles.headerFirstName)}>{firstName}</div>
+        <div className={cx(styles.headerText, styles.headerLastName)}>{lastName}</div>
+      </h1>
+    </section>
   );
 };
 

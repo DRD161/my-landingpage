@@ -9,6 +9,30 @@ import Contact from '../components/Contact';
 
 // hooks
 import { useGetIcons } from '../hooks/use-get-icons';
+import Projects from '../components/Projects';
+
+const projects = [
+  {
+    id: 'geo',
+    title: 'GeoTimeline',
+    link: 'google.com',
+  },
+  {
+    id: 'crypto',
+    title: 'Crypto Graph',
+    link: 'google.com',
+  },
+  {
+    id: 'pong',
+    title: 'Pong JS',
+    link: 'google.com',
+  },
+  {
+    id: 'tip',
+    title: 'Tip Calculator',
+    link: 'google.com',
+  },
+];
 
 const IndexPage: React.FC<PageProps> = () => {
   const { icons } = useGetIcons();
@@ -25,6 +49,7 @@ const IndexPage: React.FC<PageProps> = () => {
           make dynamic data driven content."
         />
         <Contact link={'mailto:dylan@dylandavenport.com'} text={'get in touch'} />
+        <Projects header="Projects" projects={projects} />
       </>
     </Layout>
   );
