@@ -31,8 +31,8 @@ p {
   height: 100vh;
   padding: 0 15px;
   background-image: url(../../images/curve.svg);
-  background-size: contain;
-  background-position: center 30%;
+  background-size: 90%;
+  background-position: left 30%;
   background-repeat: no-repeat;
 }
 
